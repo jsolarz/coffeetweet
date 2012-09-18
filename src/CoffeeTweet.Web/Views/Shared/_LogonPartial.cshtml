@@ -1,0 +1,43 @@
+﻿@using CoffeeTweet.Models.Helpers
+<div class="logon-form">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <text><div class="btn-group pull-right">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user">
+            </i>@User.Identity.Name <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Sign Out", "LogOff", "Account", new { area = "" }, null)</li>
+            </ul>
+        </div>
+        </text>    
+    }
+    else
+    {        
+        <div class="row">
+            <div class="span4">
+                <div class="login-form">
+                    <h2>
+                        Login</h2>
+                    <form action="">
+                    <fieldset>
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="password" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button class="btn btn-primary" type="submit">Sign in</button>
+                            @Html.ActionImage("TwitterLogon", "Account", null, "~/assets/img/sign-in-with-twitter-d.png", "Sign in with twitter")
+                        </div>
+                    </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+</div>

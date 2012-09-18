@@ -1,6 +1,61 @@
-# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
-bin
-obj
+# Ignore file for Visual Studio
+# taken from http://stackoverflow.com/questions/34784/mercurial-setup-for-visual-studio-2008-projects/744333#744333
 
-# mstest test results
-TestResults
+# use glob syntax
+syntax: glob
+
+# Ignore Visual Studio 2008 files
+*.obj
+*.exe
+*.pdb
+*.dbmdl
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.scc
+[Bb]in
+[Dd]ebug*/
+obj/
+[Rr]elease*/
+_ReSharper*/
+[Tt]est[Rr]esult*
+[Bb]uild[Ll]og.*
+*.[Pp]ublish.xml
+
+*.schemaview
+
+# Ignore vim swp files
+*.swp
+
+#ignore generated files
+relre:.*App_Data\error.*xml
+relre:.*App_Data\\error.*\.xml
+*packages.config
+Publish/*
+New folder/*
+*/Thumbs.db
+syntax: regexp
+.*\.orig$
+RGA.Image/*
+Rga.Image/*
+
+PSD
+testCode
+log/
+src/McCormick.Dinnertising.Web/Assets/img/videos/*
+deploy/
+
+

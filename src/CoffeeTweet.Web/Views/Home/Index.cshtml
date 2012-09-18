@@ -1,0 +1,34 @@
+﻿@using CoffeeTweet.Domain.Entities
+@{
+    ViewBag.Title = "Index";
+}
+<!-- Example row of columns -->
+<div class="row">
+    <div class="span4">
+        <h2>
+            Most Coffee Drinkers</h2>
+        <ul>
+            @foreach (var item in (Dictionary<User, int>)ViewBag.MostDrinkers)
+            {
+                <li>
+                    <p>@item.Key.ScreenName - @item.Value</p>
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="span4">
+        <h2>
+            Latest Requests</h2>
+        <ul>
+            @foreach (var item in (List<Coffee>)ViewBag.Coffees)
+            {
+                <li>
+                    <p>@item.Text</p>
+                    <p>@item.User - @item.CreatedDate</p>
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="span4">
+    </div>
+</div>
